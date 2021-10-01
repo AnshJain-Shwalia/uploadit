@@ -5,7 +5,6 @@ NUM_FILES = 10
 
 
 def recreate(map, raw_path,recreation_path):
-    print('This is modified recreate.')
     for file in map[3]:
         name = os.path.join(recreation_path,file[0])
         start = file[1]

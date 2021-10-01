@@ -19,6 +19,8 @@ def main():
                 string=json.dumps(map)
                 file.write(string)
             print(f'.map file created at {map_path}')
+            print(f'Upload process is done and .map file is created at {map_path}')
+            print(f'please take care of deleting files in {raw_path}')
         elif a=='d':
             path=input('Enter path to .map file.')
             with open(path,'r') as file:
@@ -26,6 +28,8 @@ def main():
             download_path=input('Enter Download path.')
             destination_path=input('Enter destination dir.')
             download.download(map,download_path,destination_path)
+            print(f'download process is done and files have been re-created at {destination_path}.')
+            print(f'please take care of deleting files in {download_path}')
         elif a=='q':
             quit()
         else:
