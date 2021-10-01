@@ -1,0 +1,7 @@
+tests/
+.idea/
+test.py
+__pychache__/
+Untitled.ipynb
+folder_test
+.ipynb_checkpoints/
