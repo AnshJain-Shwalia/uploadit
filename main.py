@@ -1,8 +1,10 @@
 import os
-
 import upload
 import download
 import json
+
+
+
 def main():
     while True:
         a=input('What do you wanna do?(D(download)/U(upload)/Q(quit))')
@@ -22,7 +24,7 @@ def main():
             print(f'Upload process is done and .map file is created at {map_path}')
             print(f'please take care of deleting files in {raw_path}')
         elif a=='d':
-            path=input('Enter path to .map file.')
+            path=input('Enter path to .map file.(ex->directory_path/file_name.map)')
             with open(path,'r') as file:
                 map=json.loads(file.read())
             download_path=input('Enter Download path.')
