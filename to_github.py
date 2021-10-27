@@ -1,7 +1,8 @@
 import os
 from github import Github
 
-def to_github(map,raw_path,token,):
+def to_github(map,raw_path,token):
+    validate_token(token)
     g=Github(token)
     user=g.get_user()
     username=user.login
@@ -43,3 +44,18 @@ def to_github(map,raw_path,token,):
         print(f'Files in {new} pushed to origin')
         print(stat.read())
         print(f'done with {new}')
+
+
+
+
+def validate_token(token):
+    #validates token by gettting and printing username
+    print('Validating token.')
+    try:
+        g=Github(token)
+        user=g.get_user()
+        username=user.login
+        print(f'Username={username}')
+        print(f'token validated.')
+    except:
+        raise ValueError('Could not validate token,Validation falied.')
