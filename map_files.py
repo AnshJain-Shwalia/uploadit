@@ -15,12 +15,8 @@ def sub_map_files(map,path):
 
 
 def map_files(map,path):
+    """adds full path of files in (path variable) at map[1]."""
     sub_map_files(map,path)
-    '''
-    thing = path.split('/')
-    replacement = thing[-1]
-    for i in range(len(map[1])):
-        map[1][i] = map[1][i].replace(path, replacement)'''
 
 
 

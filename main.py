@@ -25,10 +25,15 @@ def main():
             print(f'please take care of deleting files in {raw_path}')
         elif a=='d':
             path=input('Enter path to .map file.(ex->directory_path/file_name.map)')
-            with open(path,'r') as file:
-                map=json.loads(file.read())
-            download_path=input('Enter Download path.')
-            destination_path=input('Enter destination dir.')
+            try:
+                with open(path,'r') as file:
+                    map=json.loads(file.read())
+            except:
+                raise Exception('Error loading .map file.')
+            folder_path=input('Enter destination dir.')
+            if not os.path.isdir(folder_path):
+                raise Exception(f'{folder_path} is not a directory.')
+            download_path,destination_path=download_and_destination_path(folder_path)
             download.download(map,download_path,destination_path)
             print(f'download process is done and files have been re-created at {destination_path}.')
             print(f'please take care of deleting files in {download_path}')
@@ -38,5 +43,12 @@ def main():
             raise ValueError('Wrong input')
 
 
+def download_and_destination_path(folder_path):
+    #returns tuple of download_path and destination_path
+    download_path=os.path.join(folder_path,'download_path')
+    destination_path=os.path.join(folder_path,'recreation')
+    return download_path,destination_path
 
-main()
+
+if __name__=="__main__":
+    main()
