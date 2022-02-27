@@ -5,6 +5,5 @@ Things to keep in Mind
 [] You may only upload a folder and not a file, If you want to upload a file move that file in an empty folder and upload that folder.
 
 Prerequisites:
-[] pygithhub 
-[] 
-
+[] python 
+[] pygithub
