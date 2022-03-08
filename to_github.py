@@ -1,5 +1,6 @@
 import os
 from github import Github
+from push import push
 
 def to_github(map,raw_path,token):
     validate_token(token)
@@ -37,14 +38,14 @@ def to_github(map,raw_path,token):
         stat = os.system(f'cd {new}; git config user.email ligma@balls.bitch')
         print('User config added')
         # commiting files
-        stat = os.popen(f'cd {new}; git commit -a -m "here."')
+        stat0 = os.popen(f'cd {new}; git commit -a -m "here."')
         print(f'Files in {new} commited')
         # pushing commits
-        stat = os.popen(f'cd {new}; git push -u origin master')
+        stat1 = os.popen(f'cd {new}; git branch -M main')
+        push(new)
         print(f'Files in {new} pushed to origin')
-        print(stat.read())
+        #print(stat2.read())
         print(f'done with {new}')
-
 
 
 
