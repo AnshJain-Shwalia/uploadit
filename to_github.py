@@ -1,6 +1,7 @@
 import os
 from github import Github
 from push import push
+from commit import commit
 
 def to_github(map,raw_path,token):
     validate_token(token)
@@ -38,7 +39,8 @@ def to_github(map,raw_path,token):
         stat = os.system(f'cd {new}; git config user.email ligma@balls.bitch')
         print('User config added')
         # commiting files
-        stat0 = os.popen(f'cd {new}; git commit -a -m "here."')
+        #stat0 = os.popen(f'cd {new}; git commit -a -m "here."')
+        commit(new)
         print(f'Files in {new} commited')
         # pushing commits
         stat1 = os.popen(f'cd {new}; git branch -M main')
