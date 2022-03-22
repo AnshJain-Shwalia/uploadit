@@ -1,9 +1,9 @@
 # The Point
-The point of this script is to use the github feature of unlimited repositories, as a way to share large amount of data without having to upload it on GoogleDrive/DropBox(As those have limits on amount of data).
+The point of this script is to use the github feature of unlimited repositories, as a way to share large amount of data without having to upload it on GoogleDrive/DropBox(As those have limits on amount of data that can be stored).
 
-After an Upload the script asks the user for where does he want to put the ".map file", note that information stored in this file is later used to Download the data back from github.(So anyone with this script and the .map file can download the data uploaded by themselves.)
+After an Upload, the script asks the user for where does he want to put the ".map file", note that information stored in this file is later used to Download the data back from github.(So anyone with this script and the .map file can download the data by themselves.)
 
-The idea is that if you have large amounts of data that needs to be shared then you can upload it to github via this script and share a relatively tiny .map file(generally under a MB) to the people you want to share this script to.
+The idea is that if you have large amounts of data that needs to be shared then you can upload it to github via this script and share a relatively tiny .map file(generally under a MB) to the people you want to share the data with and they can download the files by running this script.
 
 
 
