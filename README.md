@@ -123,3 +123,14 @@ To Download you will need->
 ->Path to your .map file(one example would be /home/user/important/file.map(for windows users this might be prefixed by something like /mnt/d/))
 
 ->Path to an empty directory
+
+
+## Verification 
+
+This part is optional(obviously)
+
+if you want to check if the script recreates the data faithfully while downloading you are welcome to check md5sum of your files.
+
+you can also verify using the ubuntu.map in stuff folder 
+
+it downloads ubuntu-20.04.4-desktop-amd64.iso, you can then generate a md5sum of this iso and compare the output with the iso you will download from the ubuntu's official website
