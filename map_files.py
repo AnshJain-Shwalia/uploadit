@@ -17,10 +17,3 @@ def sub_map_files(map,path):
 def map_files(map,path):
     """adds full path of files in (path variable) at map[1]."""
     sub_map_files(map,path)
-
-
-
-if __name__ == "__main__":
-    map=[[],[]]
-    map_files(map,'/home/ansh/Downloads')
-    print(map)
