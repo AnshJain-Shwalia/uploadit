@@ -23,11 +23,3 @@ def map_dir(map,path):
     replacement=thing[-1]
     for i in range(len(map[0])):
         map[0][i]=map[0][i].replace(path,replacement)
-
-
-
-if __name__=="__main__":
-    map=[[]]
-    path='/home/ansh/Downloads'
-    map_dir(map,path)
-    print(map)
