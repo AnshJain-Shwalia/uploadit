@@ -129,7 +129,7 @@ To Download you will need->
 
 This part is optional(obviously)
 
-if you want to check if the script recreates the data faithfully while downloading you are welcome to check md5sum of your files.
+if you want to check if the script recreates the data faithfully while downloading, you are welcome to check md5sum of your files.
 
 you can also verify using the ubuntu.map in stuff folder 
 
